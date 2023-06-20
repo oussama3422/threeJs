@@ -15,12 +15,12 @@ const index = () => {
     >
       <ambientLight intensity={0.5} />
       <Environment preset="city" />
-      {/* <CameraRig> */}
-      {/* <Backdrop /> */}
+      <CameraRig>
+      <Backdrop />
       <Center>
         <Shirt />
       </Center>
-      {/* </CameraRig> */}
+      </CameraRig>
     </Canvas>
   );
 };

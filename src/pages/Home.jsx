@@ -14,7 +14,7 @@ function Home() {
   return (
     <AnimatePresence>
         {snap.intro && (
-            <motion.div className="home" {...slideAnimation('left')}>
+            <motion.section className="home" {...slideAnimation('left')}>
                 <motion.header {...slideAnimation('down')}>
                     <img src="./threejs.png" alt="Logo" className='w-8 h-8 object-contain '/>
                 </motion.header>
@@ -28,21 +28,22 @@ function Home() {
                        {...headContentAnimation}
                        className="flex flex-col gap-5"
                         >
-                        <p className='max-w-md font-normal text-gray-600 text-base'>
+                        <p className='max-w-md font-normal text-gray-600 
+                         text-base'
+                         >
                             Create your unique and exclusive shirt with our 
                             brand-new 3D customization tool.<string>Unleash your 
-                            imagination </string>{" "}
-                            and define our own style.
+                            imagination </string>{" "} and define our own style.
                         </p>
                         <CustomButton
                            type="filled"
                            title="Custmise It"
                            handleClick={()=>state.intro = false}
-                           customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+                           customStyles="w-fit px-10 py-5 font-bold text-sm"
                         />
                     </motion.div>
                 </motion.div>
-            </motion.div>
+            </motion.section>
         )}
     </AnimatePresence>
   )
